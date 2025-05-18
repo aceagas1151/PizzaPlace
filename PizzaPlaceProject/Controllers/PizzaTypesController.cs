@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using PizzaPlaceProject.Data;
+using PizzaPlaceProject.Entities;
 
 namespace PizzaPlaceProject.Controllers
 {
@@ -7,5 +10,17 @@ namespace PizzaPlaceProject.Controllers
     [ApiController]
     public class PizzaTypesController : ControllerBase
     {
+        private readonly PizzaPlaceDbContext _context;
+
+        public PizzaTypesController(PizzaPlaceDbContext context)
+        {
+            _context = context;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<PizzaType>>> GetPizzaTypes()
+        {
+            return await _context.PizzaTypes.ToListAsync();
+        }
     }
 }
