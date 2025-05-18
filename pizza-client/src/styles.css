@@ -166,3 +166,13 @@
   font-size: 0.95rem;
   color: #444;
 }
+
+.btn {
+  background-color: #c62828;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
