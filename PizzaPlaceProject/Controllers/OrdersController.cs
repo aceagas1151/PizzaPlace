@@ -20,12 +20,14 @@ namespace PizzaPlaceProject.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Order>>> GetOrders()
         {
+            //Return all Orders
             return await _context.Orders.ToListAsync();
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Order>> GetOrder(int id)
         {
+            //Find Order based on Id
             var order = await _context.Orders
                .FirstOrDefaultAsync(o => o.Id == id);
 

@@ -19,7 +19,21 @@ namespace PizzaPlaceProject.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<OrderDetail>>> GetOrderDetails()
         {
-            return null;
+            //Return all OrderDetail
+            return await _context.OrderDetails.ToListAsync();
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<OrderDetail>> GetOrderDetail(int id)
+        {
+            //Find OrderDetail based on Id
+            var orderDetail = await _context.OrderDetails
+               .FirstOrDefaultAsync(o => o.Id == id);
+
+            if (orderDetail == null)
+                return NotFound();
+
+            return orderDetail;
         }
     }
 }
