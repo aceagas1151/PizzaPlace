@@ -6,5 +6,8 @@
         public required string PizzaTypeId { get; set; }
         public required string Size { get; set; }
         public decimal Price { get; set; }
+
+        public PizzaType PizzaType { get; set; }
+        public ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }
