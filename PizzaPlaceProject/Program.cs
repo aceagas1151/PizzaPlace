@@ -27,4 +27,11 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<PizzaPlaceDbContext>();
+    context.Database.Migrate();
+    DataInitializer.SeedDatabase(context);
+}
+
 app.Run();
