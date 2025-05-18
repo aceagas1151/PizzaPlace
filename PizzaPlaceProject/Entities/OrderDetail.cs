@@ -6,7 +6,7 @@
         public required int OrderId { get; set; }
         public required string PizzaId { get; set; }
         public int Quantity { get; set; }
-        public Order Order { get; set; }
-        public Pizza Pizza { get; set; }
+        //public Order Order { get; set; }
+        //public Pizza Pizza { get; set; }
     }
 }

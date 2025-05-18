@@ -5,5 +5,5 @@ import { OrdersComponent } from './components/orders/orders.component';
 export const routes: Routes = [
   { path: 'orders', component: OrdersComponent },
   { path: 'pizza-types', component: PizzaTypeListComponent },
-  { path: '', redirectTo: '/pizza-types', pathMatch: 'full' }
+  { path: '', redirectTo: '/orders', pathMatch: 'full' }
 ];

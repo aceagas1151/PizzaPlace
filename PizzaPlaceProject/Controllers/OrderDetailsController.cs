@@ -19,10 +19,7 @@ namespace PizzaPlaceProject.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<OrderDetail>>> GetOrderDetails()
         {
-            return await _context.OrderDetails
-                .Include(d => d.Pizza)
-                .Include(d => d.Order)
-                .ToListAsync();
+            return null;
         }
     }
 }
