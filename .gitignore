@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/PizzaPlaceProject/pizza_sales.db-wal
+/PizzaPlaceProject/pizza_sales.db-shm
+/PizzaPlaceProject/pizza_sales.db
