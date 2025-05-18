@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderService, Order } from '../../services/order.service';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-orders',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './orders.component.html'
 })
 export class OrdersComponent implements OnInit {
