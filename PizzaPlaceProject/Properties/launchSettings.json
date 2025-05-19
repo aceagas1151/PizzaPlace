@@ -12,12 +12,3 @@
         }
     }
 }
-
-
-//Build a minimal Task Manager where users can:
-
-//View a list of tasks
-
-//Add a new task
-
-//Mark a task as completed

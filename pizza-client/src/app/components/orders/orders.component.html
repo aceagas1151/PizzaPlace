@@ -3,14 +3,14 @@
     <h2>Orders</h2>
     <hr />
 
-<div class="card-grid">
-  <a *ngFor="let order of paginatedOrders"
-     [routerLink]="['/orders', order.id]"
-     class="pizza-card order-card-link">
-    <h3 class="pizza-title">Order #: {{ order.id }}</h3>
-    <p><strong>Date:</strong> {{ order.orderDate | date: 'yyyy-MM-dd HH:mm:ss' }}</p>
-  </a>
-</div>
+  <div class="card-grid">
+    <a *ngFor="let order of paginatedOrders"
+      [routerLink]="['/orders', order.id]"
+      class="pizza-card order-card-link">
+      <h3 class="pizza-title">Order #: {{ order.id }}</h3>
+      <p><strong>Date:</strong> {{ order.orderDate | date: 'yyyy-MM-dd HH:mm:ss' }}</p>
+    </a>
+  </div>
     
   </div>
 
